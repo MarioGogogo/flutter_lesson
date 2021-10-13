@@ -10,6 +10,7 @@
  * 可以输入预定的版权声明、个性签名、空行等
  */
 import 'package:flutter/material.dart';
+import 'package:flutter_lesson/demo/app_upgrade.dart';
 import 'package:flutter_lesson/demo/base_login_route.dart';
 import 'package:flutter_lesson/demo/base_refresh_listview.dart';
 import 'package:flutter_lesson/demo/count_down.dart';
@@ -60,6 +61,16 @@ class FirstPage extends StatelessWidget {
               onTap: () => {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return CountdownRoute();
+                }))
+              },
+            ),
+            Divider(),
+            ListTile(
+              title: Text("升级App"),
+              subtitle: Text('Get.toNamed("/demo")'),
+              onTap: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return UpdateAppPage();
                 }))
               },
             ),
